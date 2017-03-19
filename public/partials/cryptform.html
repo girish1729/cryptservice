@@ -1,12 +1,10 @@
-<div ng-app='in2nData' layout="row" layout-margin layout-wrap
+<div ng-app='Cryptservice' ng-controller="Cryptctrl"  layout="row" layout-margin layout-wrap
 layout-align="center center">
       <md-card>
         <md-card-title>
        <md-toolbar>
           <div class="md-toolbar-tools">
-            <h2><span>
-<md-icon aria-label="copyright" class="material-icons">copyright</md-icon>
-Crypt form</span></h2>
+            <h2><span> Crypt form</span></h2>
           </div>
         </md-toolbar>
 	</md-card-title>
@@ -14,29 +12,12 @@ Crypt form</span></h2>
         <md-card-content>
     <form name="Cryptform">
     <md-input-container class="md-icon-float md-block">
-      <!-- Use floating label instead of placeholder -->
-      <label>FeedName</label>
-      <md-icon class="name">account_box</md-icon>
-    <input placeholder="Feed name" type="text" name="feedname" ng-model="feed.name" ng-minlength="2"
-           ng-maxlength="20" ng-blur="checkfeedavail(feed.name)" required /> 
-     <div ng-if="feed.available" >
-    	<img src="/public/images/tick.png" />	
-     </div>
-     <div ng-if="feedtaken" >
-		Feed taken sorry
-     </div>
+      <label>Encrypt sensitive text</label>
+    <input placeholder="Secret text" type="text" name="sectxt"
+ng-model="sectxt" />
     </md-input-container>
-
-  <div ng-messages="addFeed.feedname.$error"
-ng-show="addFeed.feedname.$touched" style="color:red" role="alert">
-    <div ng-message="required">You did not enter a field</div>
-    <div ng-message="minlength">Your field is too short</div>
-    <div ng-message="maxlength">Your field is too long</div>
-  </div>
-
-
-
         </md-card-content>
+
 	<md-card-actions>
 		<md-button ng-class="'md-raised md-primary'"
 ng-click-copy="{{jwt}}" > Copy to clipboard

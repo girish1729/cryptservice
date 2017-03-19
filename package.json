@@ -1,0 +1,25 @@
+{
+  "name": "angcrud",
+  "version": "1.0.0",
+  "description": "Angular CRUD module with express",
+  "main": "f.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=express:* node cipherserv.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girish1729/angcrud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girish1729/angcrud/issues"
+  },
+  "homepage": "https://github.com/girish1729/angcrud#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-logger": "0.0.3"
+  }
+}
