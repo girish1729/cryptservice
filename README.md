@@ -17,6 +17,8 @@ Screenshots
 ===========
 
 ![s](https://cloud.githubusercontent.com/assets/6890469/23995383/5f8d7162-0a6f-11e7-9cb4-e1020c515bcd.gif)
+![shot](https://cloud.githubusercontent.com/assets/6890469/24080342/1548824e-0cc3-11e7-829e-95fa1a38407f.png)
+
 
 Usage
 ========
