@@ -1,7 +1,7 @@
 {
-  "name": "angcrud",
+  "name": "cryptservice",
   "version": "1.0.0",
-  "description": "Angular CRUD module with express",
+  "description": "Angular Cipher service with plugin",
   "main": "f.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/girish1729/angcrud.git"
+    "url": "git+https://github.com/girish1729/cryptservice.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/girish1729/angcrud/issues"
+    "url": "https://github.com/girish1729/cryptservice/issues"
   },
-  "homepage": "https://github.com/girish1729/angcrud#readme",
+  "homepage": "https://github.com/girish1729/cryptservice#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",

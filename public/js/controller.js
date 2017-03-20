@@ -1,9 +1,9 @@
 var app = angular.module('Cryptservice', ['ngResource', 'ngMaterial', 'ngAnimate', 
-	'ngAria', 'ngMessages', 'ui.router']);
+	'ngAria', 'ngMessages', 'ui.router', 'Cipher']);
 
 app.config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('grey')
+            .primaryPalette('deep-orange')
             .accentPalette('brown');
 });
      
@@ -15,28 +15,4 @@ app.config(function($stateProvider, $urlRouterProvider){
 	templateUrl: '/public/partials/cryptform.html', 
 	controller: 'Cryptctrl'}
 	);
-}).controller('Cryptctrl', function($scope, $http){  
-
-	$scope.encryptapi = function() {
-		$http.post('/api/decryptverify/', { name : "Girish"})
-			.then(function(resp) {
-				alert(resp.data.status);
-			}, function(e) {
-				alert("Create failed");
-			});
-			
-	};
-
-	$scope.decryptapi = function() {
-			$http.post('/api/create', { name : "Girish"})
-			.then(function(resp) {
-				alert(resp.data.status);
-			}, function(e) {
-				alert("Create failed");
-			});
-		
-	};
-
-});
-
-
+})

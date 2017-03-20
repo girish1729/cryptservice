@@ -1,33 +1,53 @@
-<div ng-app='Cryptservice' ng-controller="Cryptctrl"  layout="row" layout-margin layout-wrap
-layout-align="center center">
+<div ng-app='Cryptservice' ng-controller="Cryptctrl">
+
       <md-card>
         <md-card-title>
        <md-toolbar>
           <div class="md-toolbar-tools">
-            <h2><span> Crypt form</span></h2>
+            <h2><span> Encrypt form</span></h2>
           </div>
         </md-toolbar>
 	</md-card-title>
 
         <md-card-content>
-    <form name="Cryptform">
     <md-input-container class="md-icon-float md-block">
       <label>Encrypt sensitive text</label>
-    <input placeholder="Secret text" type="text" name="sectxt"
-ng-model="sectxt" />
+    <textarea md-maxlength="150" placeholder="Secret text" type="text"
+name="plaintxt"
+ng-model="plaintxt" ></textarea>
     </md-input-container>
-        </md-card-content>
 
 	<md-card-actions>
-		<md-button ng-class="'md-raised md-primary'"
-ng-click-copy="{{jwt}}" > Copy to clipboard
-		</md-button>
-   <md-button  ng-click="Crypt(plaintxt);" ng-class="{'md-raised md-primary':
-	(Cryptform.$dirty && Cryptform.$valid) }">Encrypt selection</md-button>
- 
+   <md-button  ng-click="Encrypt(plaintxt);" 
+	ng-class="'md-raised md-primary'" >Encrypt</md-button>
 	</md-card-actions>
+        </md-card-content>
       </md-card>
 
+  <md-card>
+        <md-card-title>
+       <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2><span> Decrypt form</span></h2>
+          </div>
+        </md-toolbar>
+	</md-card-title>
+
+        <md-card-content>
+    <md-input-container class="md-icon-float md-block">
+      <label>Paste text to decrypt</label>
+    <textarea md-maxlength="150" placeholder="Secret text" type="text" name="sectxt"
+ng-model="sectxt" ></textarea>
+    </md-input-container>
+    </form>
+
+	<md-card-actions>
+   <md-button  ng-click="Decrypt(sectxt);" 
+	ng-class="'md-raised md-primary'">Decrypt </md-button>
+ 
+	</md-card-actions>
+        </md-card-content>
+      </md-card>
 
 </div>
 
